@@ -23,3 +23,22 @@ docker start -a -i ID_CONTAINER
 
 #parar um container específico
 docker stop ID_CONTAINER
+
+#remover um container específico
+docker rm ID_CONTAINER
+
+#remover todos os containers inativos
+docker container prune
+
+#listar as imagens criadas
+docker images
+
+#remover uma imagem específico
+docker rmi ID_CONTAINER ou docker rmi NOME_DA_IMAGEM
+
+
+
+
+
+
+

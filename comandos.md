@@ -66,6 +66,9 @@ docker port ID_CONTAINER
 #inspeciona o container
 docker inspect ID_CONTAINER
 
+#criar uma imagem a partir de um Dockerfile especificando o nome do arquivo no diretório atual
+docker build -f Dockerfile .
 
-
+#criar uma imagem a partir de um Dockerfile especificando uma tag
+docker build -t CRIADOR/NOME_IMAGEM
 

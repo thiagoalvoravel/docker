@@ -6,11 +6,29 @@ docker version
 #cria um container com a respectiva imagem passada como parâmetro
 docker run NOME_DA_IMAGEM
 
+#cria um container com variáveis de ambiente e com a respectiva imagem passada como parâmetro
+docker run -e VARIAVEL="VALOR" NOME_DA_IMAGEM
+
+#cria um container com a respectiva imagem passada como parâmetro e atribuindo um nome ao container
+docker run --name NOME_DO_CONTAINER NOME_DA_IMAGEM
+
 #cria um container com a respectiva imagem passada como parâmetro e acessa o terminal interativo do container criado
 docker run NOME_DA_IMAGEM -it
 
+#cria um container com a respectiva imagem passada como parâmetro sem atrelar o terminal ao container
+docker run -d NOME_DA_IMAGEM
+
+#cria um container com a respectiva imagem passada como parâmetro e vincula os serviços rodando com portas no container com portas da máquina host
+docker run -P NOME_DA_IMAGEM
+
+#cria um container com a respectiva imagem passada como parâmetro e vincula as portas específicas no host a serem usadas pelos serviços
+docker run -p PORTA_HOST:PORTA_CONTAINER NOME_DA_IMAGEM
+
 #listar os containers ativos
 docker ps
+
+#listar os IDs dos containers ativos
+docker ps -q
 
 #listar os containers criados
 docker ps -a
@@ -24,6 +42,9 @@ docker start -a -i ID_CONTAINER
 #parar um container específico
 docker stop ID_CONTAINER
 
+#parar os containers listados pelo comando dentro dos parênteses
+docker stop $(sudo docker ps -q)
+
 #remover um container específico
 docker rm ID_CONTAINER
 
@@ -36,8 +57,8 @@ docker images
 #remover uma imagem específico
 docker rmi ID_CONTAINER ou docker rmi NOME_DA_IMAGEM
 
-
-
+#lista as portas usadas pelo container
+docker port ID_CONTAINER 
 
 
 

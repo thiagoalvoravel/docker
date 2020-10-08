@@ -6,6 +6,9 @@ docker version
 #cria um container com a respectiva imagem passada como parâmetro
 docker run NOME_DA_IMAGEM
 
+#cria um container com a respectiva imagem passada como parâmetro com um volume no respectivo caminho do container
+docker run -v "[CAMINHO_VOLUME_LOCAL:]CAMINHO_VOLUME_CONTAINER" NOME_DA_IMAGEM
+
 #cria um container com variáveis de ambiente e com a respectiva imagem passada como parâmetro
 docker run -e VARIAVEL="VALOR" NOME_DA_IMAGEM
 
@@ -59,6 +62,9 @@ docker rmi ID_CONTAINER ou docker rmi NOME_DA_IMAGEM
 
 #lista as portas usadas pelo container
 docker port ID_CONTAINER 
+
+#inspeciona o container
+docker inspect ID_CONTAINER
 
 
 

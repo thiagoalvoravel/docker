@@ -74,3 +74,9 @@ docker build -t CRIADOR/NOME_IMAGEM
 
 #criar uma rede usando o driver bridge
 docker network create --driver bridge NOME_DA_REDE
+
+#criar imagens (build) a partir de um composer existente
+docker-compose build
+
+#subir os serviços a partir de um composer existente
+docker-compose up

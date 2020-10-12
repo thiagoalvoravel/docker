@@ -11,7 +11,7 @@ COPY. /var/www
 WORKDIR /var/www
 
 #variável de ambiente
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 ENV PORT=3000
 
 #comando que será executado durante o build da imagem

@@ -72,3 +72,5 @@ docker build -f Dockerfile .
 #criar uma imagem a partir de um Dockerfile especificando uma tag
 docker build -t CRIADOR/NOME_IMAGEM
 
+#criar uma rede usando o driver bridge
+docker network create --driver bridge NOME_DA_REDE

@@ -1,7 +1,7 @@
 FROM nginx:latest
 MAINTAINER Thiago Alvoravel
-COPY /public /var/www/public
-COPY /docker/config/nginx.conf /etc/nginx/nginx.conf
+COPY /atividade-compose/public /var/www/public
+COPY /atividade-compose/docker/config/nginx.conf /etc/nginx/nginx.conf
 RUN chmod 755 -R /var/www/public
 EXPOSE 80 443
 ENTRYPOINT ["nginx"]
